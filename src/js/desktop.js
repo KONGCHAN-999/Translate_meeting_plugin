@@ -397,7 +397,8 @@
       // Check if we have transcript text
       const currentRecord = kintone.app.record.get();
       const textToTranslate = transcriptText || currentRecord.record[CONFIG.transcriptField].value;
-      
+
+      // check if text is available
       if (!textToTranslate) {
         alert('❌ Please convert audio to text first');
         return;
